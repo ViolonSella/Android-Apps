@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--Container principal-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cardview_dark_background"
         android:orientation="vertical">
 
-
+        <!--Container de Título do App-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="250px"
@@ -33,6 +34,7 @@
 
         </LinearLayout>
 
+        <!--Caixa de Resultado-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="250px"
@@ -51,10 +53,12 @@
 
         </LinearLayout>
 
+        <!--Container dos botões-->
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--Botões das operações-->
             <TableRow>
 
                 <Button
@@ -85,10 +89,11 @@
 
                     android:layout_height="200px"
                     android:layout_margin="5dp"
-                    android:text="X"
+                    android:text="*"
                     android:textSize="24dp"></Button>
             </TableRow>
 
+            <!--Botões numéricos-->
             <RelativeLayout android:layout_margin="5px">
 
                 <Button
@@ -124,6 +129,7 @@
                     android:textSize="24dp"></Button>
             </RelativeLayout>
 
+            <!--Botões numéricos-->
             <RelativeLayout android:layout_margin="5px">
 
                 <Button
@@ -158,6 +164,8 @@
                     android:text="6"
                     android:textSize="24dp"></Button>
             </RelativeLayout>
+
+            <!--Botões numéricos-->
             <RelativeLayout android:layout_margin="5px">
 
                 <Button
@@ -192,6 +200,8 @@
                     android:text="3"
                     android:textSize="24dp"></Button>
             </RelativeLayout>
+
+            <!--Botão Zero, Limpar e Resultado-->
             <RelativeLayout android:layout_margin="5px">
 
                 <Button
