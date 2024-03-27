@@ -118,9 +118,9 @@ class _MyHomePageState extends State<MyHomePage> {  // Classe responsável por o
 
           Container(
             margin: const EdgeInsets.only(top:10, left: 40, right:40),
-            child: Row( // dentro desse container há uma linha, ou seja, os filhops desse componente serão organizados horizontalmente, respeitando os limites do container
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // alinhamento no eixo proncipal definido para deixar os componentes da linha com espaçamento igualmente distribuidos entre si, como um gap no CSS
-              children: [
+            child: Row( // dentro desse container há um componente row, ou seja, os filhop desse componente serão organizados horizontalmente, respeitando os limites do container
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // alinhamento no eixo principal definido para deixar os componentes da linha com espaçamento igualmente distribuido entre si, como um gap no CSS
+              children: [ // os componentes filhos dessa row serão colunas, organizados verticalmente
                 Column(
                   children: [
                     const Text('NÓS', style: TextStyle(fontSize: 25, color: Colors.green, fontWeight: FontWeight.bold) ), // texto do time 1
@@ -149,15 +149,15 @@ class _MyHomePageState extends State<MyHomePage> {  // Classe responsável por o
             '$_counter', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 40, color: Color.fromRGBO(29, 67, 0, 0.8)), // contador do time 1, representao como texto
           ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // definição de espçamento igualmente distribuido na row
           children: [
             ElevatedButton( // widget de botão elevado, posui profundidade, diferente de outros botões
-              onPressed: _incrementThreeCounter,
-                style: ElevatedButton.styleFrom(
+              onPressed: _incrementThreeCounter, // função quando pressionado, no caso a função de incrementar o contador do time 1 em 3
+                style: ElevatedButton.styleFrom( // definição do estilo do botão
                     backgroundColor: const Color.fromRGBO(14, 63, 5, 0.8),
                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              child: const Text('+3', style: TextStyle(color: Color.fromRGBO(59, 255, 53,1)))
+              child: const Text('+3', style: TextStyle(color: Color.fromRGBO(59, 255, 53,1))) //definição do estilo de texto do botão
             ),
             ElevatedButton(
               onPressed: _incrementCounter,
@@ -171,13 +171,13 @@ class _MyHomePageState extends State<MyHomePage> {  // Classe responsável por o
         ),
 
 
-          Container(
+          Container( // container do time 2, faz o mesmo que o container anterior, imprime o texto e o contador, os botões são similares, apenas mudando a função que realizam
             margin: const EdgeInsets.only(top:40),
             child: const Text('ELES - Placar da partida', style: TextStyle(fontSize: 25, color: Colors.green, fontWeight: FontWeight.bold) ),
           ),
 
           Text(
-              '$_counter2', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 40, color: Color.fromRGBO(29, 67, 0, 0.8)),
+              '$_counter2', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 40, color: Color.fromRGBO(29, 67, 0, 0.8)), // contador do time 2
           ),
 
           Row(
@@ -202,9 +202,9 @@ class _MyHomePageState extends State<MyHomePage> {  // Classe responsável por o
               ]
           ),
 
-          Container(
+          Container( // container do botão de recomeço
             margin: const EdgeInsets.only(top:40),
-            child: ElevatedButton(
+            child: ElevatedButton( // botão de resetar os contadores
                 onPressed: _resetCounters,
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
